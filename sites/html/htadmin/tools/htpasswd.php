@@ -139,7 +139,7 @@ class htpasswd {
 		rewind ( $this->fp );
 		while ( ! feof ( $this->fp ) && trim ( $lusername = array_shift ( explode ( ":", $line = rtrim ( fgets ( $this->fp ) ) ) ) ) ) {
 			if ($lusername == $username) {
-				fseek ( $this->fp, (- 15 - strlen ( $username )), SEEK_CUR );
+				fseek ( $this->fp, (-39 -strlen ( $username )), SEEK_CUR );
 				fwrite ( $this->fp, $username . ':' . self::htcrypt ( $password ) . "\n" );
 				return true;
 			}

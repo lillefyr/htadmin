@@ -8,7 +8,7 @@ if (isset ( $_POST ['user'] ) && isset ( $_POST ['password'] )) {
 	$username = $_POST ['user'];
 	$password = $_POST ['password'];
 	
-	$hash_tool = new crypt_hash_tool();
+	$hash_tool = new md5_hash_tool();
 	
 
 
